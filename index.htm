@@ -2,12 +2,87 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title>Тестер ЕГЭ</title>
+		<title>Тренажёр ЕГЭ</title>
 		<link rel="stylesheet" href="main.css">
 		<script src="scripts.js"></script>
 	</head>
 
 	<body>
+		<div class="top" id="div_top">
+			<img src="bison_black.png">
+			<span>ЕГЭ по информатике и ИКТ</span>
+		</div>
 
+		<div class="main" id="div_main">
+
+			<div class="first_step" id="div_first_step">
+
+				<div>
+					<a href="#" class="button_first" id="button_to_theme" onclick="press_to_theme()">Билеты по темам</a><br>
+					<a href="#" class="button_first" id="button_to_2014" onclick="press_to_2014()">Билеты 2014 года</a><br>
+					<a href="#" class="button_first" id="button_to_exam">Режим экзамена</a>
+				</div>
+			</div>
+
+			<div class="menu2014" id="div_menu2014">
+				<div>
+					<a href="#" class="button2014" id="menu2014_to_1">Билет 1</a>
+					<a href="#" class="button2014" id="menu2014_to_2">Билет 2</a><br>
+					<a href="#" class="button2014" id="menu2014_to_3">Билет 3</a>
+					<a href="#" class="button2014" id="menu2014_to_4">Билет 4</a><br>
+					<a href="#" class="button2014" id="menu2014_to_5">Билет 5</a>
+					<a href="#" class="button2014" id="menu2014_to_6">Билет 6</a><br>
+					<a href="#" class="button2014" id="menu2014_to_7">Билет 7</a>
+					<a href="#" class="button2014" id="menu2014_to_8">Билет 8</a><br>
+					<a href="#" class="button_first" id="button_to_main" style="margin-left:35px;" onclick="press2014_to_main()">Назад в главное меню</a>
+				</div>
+			</div>
+
+			<div class="menutheme" id="div_menutheme">
+				<div>
+					<a href="#" class="buttontheme" id="menutheme_to_A1" onclick="press_to_ticket('A1')">A1</a>
+					<a href="#" class="buttontheme" id="menutheme_to_A2" onclick="press_to_ticket('A2')">A2</a>
+					<a href="#" class="buttontheme" id="menutheme_to_A3" onclick="press_to_ticket('A3')">A3</a>
+					<a href="#" class="buttontheme" id="menutheme_to_A4" onclick="press_to_ticket('A4')">A4</a>
+					<a href="#" class="buttontheme" id="menutheme_to_A5" onclick="press_to_ticket('A5')">A5</a><br>
+					<a href="#" class="buttontheme" id="menutheme_to_A6" onclick="press_to_ticket('A6')">A6</a>
+					<a href="#" class="buttontheme" id="menutheme_to_A7" onclick="press_to_ticket('A7')">A7</a>
+					<a href="#" class="buttontheme" id="menutheme_to_A8" onclick="press_to_ticket('A8')">A8</a>
+					<a href="#" class="buttontheme" id="menutheme_to_A9" onclick="press_to_ticket('A9')">A9</a>
+					<a href="#" class="buttontheme" id="menutheme_to_A10" onclick="press_to_ticket('A10')">A10</a><br>
+					<a href="#" class="buttontheme" id="menutheme_to_A11" onclick="press_to_ticket('A11')">A11</a>
+					<a href="#" class="buttontheme" id="menutheme_to_A12" onclick="press_to_ticket('A12')">A12</a>
+					<a href="#" class="buttontheme" id="menutheme_to_A13" onclick="press_to_ticket('A13')">A13</a><br>
+					<a href="#" class="buttontheme" id="menutheme_to_B1" onclick="press_to_ticket('B1')">B1</a>
+					<a href="#" class="buttontheme" id="menutheme_to_B2" onclick="press_to_ticket('B2')">B2</a>
+					<a href="#" class="buttontheme" id="menutheme_to_B3" onclick="press_to_ticket('B3')">B3</a>
+					<a href="#" class="buttontheme" id="menutheme_to_B4" onclick="press_to_ticket('B4')">B4</a>
+					<a href="#" class="buttontheme" id="menutheme_to_B5" onclick="press_to_ticket('B5')">B5</a><br>
+					<a href="#" class="buttontheme" id="menutheme_to_B6" onclick="press_to_ticket('B6')">B6</a>
+					<a href="#" class="buttontheme" id="menutheme_to_B7" onclick="press_to_ticket('B7')">B7</a>
+					<a href="#" class="buttontheme" id="menutheme_to_B8" onclick="press_to_ticket('B8')">B8</a>
+					<a href="#" class="buttontheme" id="menutheme_to_B9" onclick="press_to_ticket('B9')">B9</a>
+					<a href="#" class="buttontheme" id="menutheme_to_B10" onclick="press_to_ticket('B10')">B10</a><br>
+					<a href="#" class="buttontheme" id="menutheme_to_B11" onclick="press_to_ticket('B11')">B11</a>
+					<a href="#" class="buttontheme" id="menutheme_to_B12" onclick="press_to_ticket('B12')">B12</a>
+					<a href="#" class="buttontheme" id="menutheme_to_B13" onclick="press_to_ticket('B13')">B13</a>
+					<a href="#" class="buttontheme" id="menutheme_to_B14" onclick="press_to_ticket('B14')">B14</a>
+					<a href="#" class="buttontheme" id="menutheme_to_B15" onclick="press_to_ticket('B15')">B15</a><br>
+					<a href="#" class="button_first" id="button_to_main" style="margin-left:89px;" onclick="presstheme_to_main()">Назад в главное меню</a>
+
+				</div>
+			</div>
+
+			<div class="menuticket" id="div_menuticket">
+				<span id="span_theme" class="theme"></span>
+				<div id="div_ticket"></div>
+			</div>
+
+		</div>
+
+		<div class="bottom" id="div_bottom">
+			<span>Тренажёр ЕГЭ (c) Copyright 2014 <a href="https://vk.com/profit_krsk">Тренинг-центр "Профит"</a></span>
+
+		</div>
 	</body>
 </html>

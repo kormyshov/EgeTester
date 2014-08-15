@@ -1,0 +1,170 @@
+body {
+  font-family: Verdana;
+}
+
+div.top {
+  width: 607px;
+  height: 50px;
+  background-color: #ff6400;
+  margin-top: -8px;
+  margin-left: -8px;
+}
+
+div.top img {
+  height: 44px;
+  margin-top: 3px;
+  margin-left: 5px;
+}
+div.top span {
+  float: right;
+  font-size: 24px;
+  margin-top: 8px;
+  margin-right: 120px;
+}
+
+div.main {
+  width: 607px;
+  height: 400px;
+  background-color: #ddd;
+  margin-left: -8px;
+}
+
+div.first_step div {
+  padding: 120px 0px 0px 140px;
+}
+
+div.menu2014 {
+  display: none;
+}
+div.menu2014 div {
+  padding: 80px 0px 0px 110px;
+}
+
+div.menutheme {
+  display: none;
+}
+div.menutheme div {
+  padding: 25px 0px 0px 55px;
+}
+
+div.menuticket {
+  display: none;
+}
+div.menuticket div {
+  padding: 80px 0px 0px 88px;
+}
+
+div.bottom {
+  width: 607px;
+  height: 50px;
+  background-color: #ff6400;
+  margin-left: -8px;
+}
+
+div.bottom span {
+  float: right;
+  font-size: 12px;
+  margin-top: 16px;
+  margin-right: 20px;
+}
+div.bottom span a:visited{
+  color: black;
+}
+
+span.theme {
+  float: left;
+  font-size: 32px;
+  margin-left: 15px;
+}
+
+a.button_first {
+  display: inline-block;
+  color: white;
+  text-decoration: none;
+  padding: .5em 2em;
+  outline: none;
+  border-width: 2px 0;
+  border-style: solid none;
+  border-color: #FDBE33 #000 #D77206;
+  border-radius: 6px;
+  background: linear-gradient(#F3AE0F, #E38916) #E38916;
+  transition: 0.2s;
+  width: 250px;
+  text-align: center;
+  margin-bottom: 10px;
+} 
+a.button_first:hover {
+  background: linear-gradient(#f5ae00, #f59500) #f5ae00;
+}
+a.button_first:active {
+  background: linear-gradient(#f59500, #f5ae00) #f59500;
+}
+
+a.button2014 {
+  display: inline-block;
+  color: white;
+  text-decoration: none;
+  padding: .5em 2em;
+  outline: none;
+  border-width: 2px 0;
+  border-style: solid none;
+  border-color: #FDBE33 #000 #D77206;
+  border-radius: 6px;
+  background: linear-gradient(#F3AE0F, #E38916) #E38916;
+  transition: 0.2s;
+  width: 125px;
+  text-align: center;
+  margin-bottom: 10px;
+} 
+a.button2014:hover {
+  background: linear-gradient(#f5ae00, #f59500) #f5ae00;
+}
+a.button2014:active {
+  background: linear-gradient(#f59500, #f5ae00) #f59500;
+}
+
+a.buttontheme {
+  display: inline-block;
+  color: white;
+  text-decoration: none;
+  padding: .5em 2em;
+  outline: none;
+  border-width: 2px 0;
+  border-style: solid none;
+  border-color: #FDBE33 #000 #D77206;
+  border-radius: 6px;
+  background: linear-gradient(#F3AE0F, #E38916) #E38916;
+  transition: 0.2s;
+  width: 30px;
+  text-align: center;
+  margin-bottom: 10px;
+} 
+a.buttontheme:hover {
+  background: linear-gradient(#f5ae00, #f59500) #f5ae00;
+}
+a.buttontheme:active {
+  background: linear-gradient(#f59500, #f5ae00) #f59500;
+}
+
+a.buttonticket {
+  display: inline-block;
+  color: white;
+  text-decoration: none;
+  padding: .5em 2em;
+  outline: none;
+  border-width: 2px 0;
+  border-style: solid none;
+  border-color: #FDBE33 #000 #D77206;
+  border-radius: 6px;
+  background: linear-gradient(#F3AE0F, #E38916) #E38916;
+  transition: 0.2s;
+  width: 75px;
+  text-align: center;
+  margin-bottom: 10px;
+} 
+a.buttonticket:hover {
+  background: linear-gradient(#f5ae00, #f59500) #f5ae00;
+}
+a.buttonticket:active {
+  background: linear-gradient(#f59500, #f5ae00) #f59500;
+}
