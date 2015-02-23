@@ -30,7 +30,7 @@ div.main {
 }
 
 div.first_step div {
-  padding: 120px 0px 0px 140px;
+  padding: 140px 0px 0px 140px;
 }
 
 div.menu2014 {
@@ -44,7 +44,7 @@ div.menutheme {
   display: none;
 }
 div.menutheme div {
-  padding: 25px 0px 0px 55px;
+  padding: 60px 0px 0px 55px;
 }
 
 div.menuticket {
@@ -52,6 +52,43 @@ div.menuticket {
 }
 div.menuticket div {
   padding: 80px 0px 0px 88px;
+}
+
+div.menuend {
+  display: none;
+}
+div.menuend div {
+  padding: 80px 0px 0px 88px;
+}
+
+div.board {
+  display: none;
+}
+div.board div.div_in {
+  /*background-color: red;*/
+}
+
+div.nav {
+  height: 30px;
+  background-color: #bbb;
+  padding-top: 3px;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+div.question {
+  height: 370px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+div.loadwin {
+  display: none;
+  background-color: grey;
+  height: 400px;
+}
+div.loadwin img {
+  margin-left: 190px;
+  margin-top: 190px;
 }
 
 div.bottom {
@@ -75,6 +112,58 @@ span.theme {
   float: left;
   font-size: 32px;
   margin-left: 15px;
+}
+
+span.q_title {
+  float: left;
+  font-size: 18px;
+  margin-left: 10px;
+  background-color: #ff6400;
+  width: 2.4em;
+  height: 2.4em;
+  line-height: 2.4em;
+  vertical-align: middle;
+  text-align: center;
+  border-radius: 5px;
+  margin: 5px;
+}
+
+span.q_text {
+  font-size: 14px;
+}
+
+span.q_ans {
+  display: block;
+  padding: 5px;
+}
+span.q_ans span:hover span.q_ans1 {
+  border-radius: 5px 0px 0px 5px;
+}
+span.q_ans span span.q_ans1 {
+  background-color: #ff6400;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-radius: 5px;
+}
+span.q_ans span span.q_ans1a {
+  background-color: #ff6400;
+  border-radius: 5px 0px 0px 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+span.q_ans span span.q_ans2 {
+  padding-left: 5px;
+  padding-right: 5px;
+  border-radius: 0px 5px 5px 0px;
+}
+span.q_ans span span.q_ans2:hover {
+  background-color: #ff6400;
+}
+span.q_ans span span.q_ans2a {
+  padding-left: 5px;
+  padding-right: 5px;
+  border-radius: 0px 5px 5px 0px;
+  background-color: #ff6400;
 }
 
 a.button_first {
@@ -167,4 +256,98 @@ a.buttonticket:hover {
 }
 a.buttonticket:active {
   background: linear-gradient(#f59500, #f5ae00) #f59500;
+}
+
+a.button_answer {
+  display: inline-block;
+  color: white;
+  font-size: 14px;
+  text-decoration: none;
+  padding: .1em .5em;
+  outline: none;
+  border-width: 2px 0;
+  border-style: solid none;
+  border-color: #FDBE33 #000 #D77206;
+  border-radius: 6px;
+  background: linear-gradient(#F3AE0F, #E38916) #E38916;
+  transition: 0.2s;
+  width: 75px;
+  text-align: center;
+  margin-bottom: 10px;
+} 
+a.button_answer:hover {
+  background: linear-gradient(#f5ae00, #f59500) #f5ae00;
+}
+a.button_answer:active {
+  background: linear-gradient(#f59500, #f5ae00) #f59500;
+}
+
+a.buttonnav {
+  position: relative;
+  display: inline-block;
+  width: 2.4em;
+  height: 2.4em;
+  line-height: 2.4em;
+  vertical-align: middle;
+  text-align: center;
+  text-decoration: none;
+  font-size: 11px;
+  color: #000;
+  outline: none;
+  border-radius: 5px;
+  box-shadow: 0 0 0 1px #ddd inset, 0 1px 1px #fff;
+}
+a.buttonnav:hover {
+  background: #dcdcdc linear-gradient(#fff, #dcdcdc);
+  box-shadow: 0 0 0 1px #aaa inset, 0 1px 1px #aaa;
+}
+a.buttonnav:active {
+  background: none;
+  box-shadow: 0 0 0 1px #bbb inset, 0 1px 3px rgba(0,0,0,.5) inset, 0 1px 2px #fff;
+}
+
+table.q_table {
+  float: right;
+  border: solid 1px;
+  border-bottom: none;
+  border-right: none;
+}
+
+table.q_table tr th {
+  border: solid 1px;
+  border-left: none;
+  border-top: none;
+  padding-left: 6px;
+  padding-right: 6px;
+}
+
+table.q_table tr td {
+  border: solid 1px;
+  border-left: none;
+  border-top: none;
+  text-align: center;
+  padding-left: 6px;
+  padding-right: 6px;
+}
+
+table.q_table tr td.grey {
+  background-color: grey;
+}
+
+table.q_table tr td.q_code {
+  font-family: Courier New;
+  text-align: left;
+}
+
+table.q_table tr td.q_b {
+  border-bottom: 3px solid;
+}
+
+table.q_table tr td.q_r {
+  border-right: 3px solid;
+}
+
+table.q_table tr td.q_br {
+  border-bottom: 3px solid;
+  border-right: 3px solid;
 }

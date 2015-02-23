@@ -3,8 +3,12 @@
 	<head>
 		<meta charset="utf-8">
 		<title>Тренажёр ЕГЭ</title>
-		<link rel="stylesheet" href="main.css">
+		<script src="jquery-1.11.1.min.js" type="text/javascript"></script>
+		<script src="question.js"></script>
+		<script src="navigator.js"></script>
 		<script src="scripts.js"></script>
+		<script src="//vk.com/js/api/xd_connection.js?2" type="text/javascript"></script>
+		<link rel="stylesheet" href="main.css">
 	</head>
 
 	<body>
@@ -19,55 +23,50 @@
 
 				<div>
 					<a href="#" class="button_first" id="button_to_theme" onclick="press_to_theme()">Билеты по темам</a><br>
-					<a href="#" class="button_first" id="button_to_2014" onclick="press_to_2014()">Билеты 2014 года</a><br>
-					<a href="#" class="button_first" id="button_to_exam">Режим экзамена</a>
+					<!--					<a href="#" class="button_first" id="button_to_2014" onclick="press_to_2014()">Билеты 2014 года</a><br> -->
+					<a href="#" class="button_first" id="button_to_exam" onclick="press_to_board('exam', 0, 0)">Режим экзамена</a>
 				</div>
 			</div>
 
 			<div class="menu2014" id="div_menu2014">
 				<div>
-					<a href="#" class="button2014" id="menu2014_to_1">Билет 1</a>
-					<a href="#" class="button2014" id="menu2014_to_2">Билет 2</a><br>
-					<a href="#" class="button2014" id="menu2014_to_3">Билет 3</a>
-					<a href="#" class="button2014" id="menu2014_to_4">Билет 4</a><br>
-					<a href="#" class="button2014" id="menu2014_to_5">Билет 5</a>
-					<a href="#" class="button2014" id="menu2014_to_6">Билет 6</a><br>
-					<a href="#" class="button2014" id="menu2014_to_7">Билет 7</a>
-					<a href="#" class="button2014" id="menu2014_to_8">Билет 8</a><br>
+					<a href="#" class="button2014" id="menu2014_to_1" onclick="press_to_board('2014', 0, 1)">Билет 1</a>
+					<a href="#" class="button2014" id="menu2014_to_2" onclick="press_to_board('2014', 0, 2)">Билет 2</a><br>
+					<a href="#" class="button2014" id="menu2014_to_3" onclick="press_to_board('2014', 0, 3)">Билет 3</a>
+					<a href="#" class="button2014" id="menu2014_to_4" onclick="press_to_board('2014', 0, 4)">Билет 4</a><br>
+					<a href="#" class="button2014" id="menu2014_to_5" onclick="press_to_board('2014', 0, 5)">Билет 5</a>
+					<a href="#" class="button2014" id="menu2014_to_6" onclick="press_to_board('2014', 0, 6)">Билет 6</a><br>
+					<a href="#" class="button2014" id="menu2014_to_7" onclick="press_to_board('2014', 0, 7)">Билет 7</a>
+					<a href="#" class="button2014" id="menu2014_to_8" onclick="press_to_board('2014', 0, 8)">Билет 8</a><br>
 					<a href="#" class="button_first" id="button_to_main" style="margin-left:35px;" onclick="press2014_to_main()">Назад в главное меню</a>
 				</div>
 			</div>
 
 			<div class="menutheme" id="div_menutheme">
 				<div>
-					<a href="#" class="buttontheme" id="menutheme_to_A1" onclick="press_to_ticket('A1')">A1</a>
-					<a href="#" class="buttontheme" id="menutheme_to_A2" onclick="press_to_ticket('A2')">A2</a>
-					<a href="#" class="buttontheme" id="menutheme_to_A3" onclick="press_to_ticket('A3')">A3</a>
-					<a href="#" class="buttontheme" id="menutheme_to_A4" onclick="press_to_ticket('A4')">A4</a>
-					<a href="#" class="buttontheme" id="menutheme_to_A5" onclick="press_to_ticket('A5')">A5</a><br>
-					<a href="#" class="buttontheme" id="menutheme_to_A6" onclick="press_to_ticket('A6')">A6</a>
-					<a href="#" class="buttontheme" id="menutheme_to_A7" onclick="press_to_ticket('A7')">A7</a>
-					<a href="#" class="buttontheme" id="menutheme_to_A8" onclick="press_to_ticket('A8')">A8</a>
-					<a href="#" class="buttontheme" id="menutheme_to_A9" onclick="press_to_ticket('A9')">A9</a>
-					<a href="#" class="buttontheme" id="menutheme_to_A10" onclick="press_to_ticket('A10')">A10</a><br>
-					<a href="#" class="buttontheme" id="menutheme_to_A11" onclick="press_to_ticket('A11')">A11</a>
-					<a href="#" class="buttontheme" id="menutheme_to_A12" onclick="press_to_ticket('A12')">A12</a>
-					<a href="#" class="buttontheme" id="menutheme_to_A13" onclick="press_to_ticket('A13')">A13</a><br>
-					<a href="#" class="buttontheme" id="menutheme_to_B1" onclick="press_to_ticket('B1')">B1</a>
-					<a href="#" class="buttontheme" id="menutheme_to_B2" onclick="press_to_ticket('B2')">B2</a>
-					<a href="#" class="buttontheme" id="menutheme_to_B3" onclick="press_to_ticket('B3')">B3</a>
-					<a href="#" class="buttontheme" id="menutheme_to_B4" onclick="press_to_ticket('B4')">B4</a>
-					<a href="#" class="buttontheme" id="menutheme_to_B5" onclick="press_to_ticket('B5')">B5</a><br>
-					<a href="#" class="buttontheme" id="menutheme_to_B6" onclick="press_to_ticket('B6')">B6</a>
-					<a href="#" class="buttontheme" id="menutheme_to_B7" onclick="press_to_ticket('B7')">B7</a>
-					<a href="#" class="buttontheme" id="menutheme_to_B8" onclick="press_to_ticket('B8')">B8</a>
-					<a href="#" class="buttontheme" id="menutheme_to_B9" onclick="press_to_ticket('B9')">B9</a>
-					<a href="#" class="buttontheme" id="menutheme_to_B10" onclick="press_to_ticket('B10')">B10</a><br>
-					<a href="#" class="buttontheme" id="menutheme_to_B11" onclick="press_to_ticket('B11')">B11</a>
-					<a href="#" class="buttontheme" id="menutheme_to_B12" onclick="press_to_ticket('B12')">B12</a>
-					<a href="#" class="buttontheme" id="menutheme_to_B13" onclick="press_to_ticket('B13')">B13</a>
-					<a href="#" class="buttontheme" id="menutheme_to_B14" onclick="press_to_ticket('B14')">B14</a>
-					<a href="#" class="buttontheme" id="menutheme_to_B15" onclick="press_to_ticket('B15')">B15</a><br>
+					<a href="#" class="buttontheme" id="menutheme_to_1" onclick="press_to_ticket('1')">1</a>
+					<a href="#" class="buttontheme" id="menutheme_to_2" onclick="press_to_ticket('2')">2</a>
+					<a href="#" class="buttontheme" id="menutheme_to_3" onclick="press_to_ticket('3')">3</a>
+					<a href="#" class="buttontheme" id="menutheme_to_4" onclick="press_to_ticket('4')">4</a>
+					<a href="#" class="buttontheme" id="menutheme_to_5" onclick="press_to_ticket('5')">5</a><br>
+					<a href="#" class="buttontheme" id="menutheme_to_6" onclick="press_to_ticket('6')">6</a>
+					<a href="#" class="buttontheme" id="menutheme_to_7" onclick="press_to_ticket('7')">7</a>
+					<a href="#" class="buttontheme" id="menutheme_to_8" onclick="press_to_ticket('8')">8</a>
+					<a href="#" class="buttontheme" id="menutheme_to_9" onclick="press_to_ticket('9')">9</a>
+					<a href="#" class="buttontheme" id="menutheme_to_10" onclick="press_to_ticket('10')">10</a><br>
+					<a href="#" class="buttontheme" id="menutheme_to_11" onclick="press_to_ticket('11')">11</a>
+					<a href="#" class="buttontheme" id="menutheme_to_12" onclick="press_to_ticket('12')">12</a>
+					<a href="#" class="buttontheme" id="menutheme_to_13" onclick="press_to_ticket('13')">13</a>
+					<a href="#" class="buttontheme" id="menutheme_to_14" onclick="press_to_ticket('14')">14</a>
+					<a href="#" class="buttontheme" id="menutheme_to_15" onclick="press_to_ticket('15')">15</a><br>
+					<a href="#" class="buttontheme" id="menutheme_to_16" onclick="press_to_ticket('16')">16</a>
+					<a href="#" class="buttontheme" id="menutheme_to_17" onclick="press_to_ticket('17')">17</a>
+					<a href="#" class="buttontheme" id="menutheme_to_18" onclick="press_to_ticket('18')">18</a>
+					<a href="#" class="buttontheme" id="menutheme_to_19" onclick="press_to_ticket('19')">19</a>
+					<a href="#" class="buttontheme" id="menutheme_to_20" onclick="press_to_ticket('20')">20</a><br>
+					<a href="#" class="buttontheme" id="menutheme_to_21" onclick="press_to_ticket('21')">21</a>
+					<a href="#" class="buttontheme" id="menutheme_to_22" onclick="press_to_ticket('22')">22</a>
+					<a href="#" class="buttontheme" id="menutheme_to_23" onclick="press_to_ticket('23')">23</a><br>
 					<a href="#" class="button_first" id="button_to_main" style="margin-left:89px;" onclick="presstheme_to_main()">Назад в главное меню</a>
 
 				</div>
@@ -78,11 +77,33 @@
 				<div id="div_ticket"></div>
 			</div>
 
+			<div class="board" id="div_board">
+				<div class="div_in" id="div_in">
+					<div class="nav" id="div_nav"></div>
+					<div class="question" id="div_question"></div>
+				</div>
+			</div>
+
+			<div class="menuend" id="div_menuend">
+				<div>
+					<span id="span_res"></span>
+					<a href="#" class="button_first" id="button_to_res" style="margin-left:59px;" onclick="pressend_to_res()">Посмотреть ошибки</a>
+					<a href="#" class="button_first" id="button_to_main" style="margin-left:59px;" onclick="pressend_to_main()">В главное меню</a>
+					<a href="#" class="button_first" style="margin-left:59px;" onclick="VK.callMethod('showInviteBox');">Пригласить друзей</a>
+				</div>
+			</div>
+
+			<div class="loadwin" id="div_loadwin">
+				<img src="loader.gif">
+			</div>
+
 		</div>
 
 		<div class="bottom" id="div_bottom">
-			<span>Тренажёр ЕГЭ (c) Copyright 2014 <a href="https://vk.com/profit_krsk">Тренинг-центр "Профит"</a></span>
-
+			<span>Тренажёр ЕГЭ (c) Copyright 2014-2015 <a href="https://vk.com/profit_krsk">Тренинг-центр "Профит"</a></span>
 		</div>
 	</body>
+	<script type="text/javascript">
+		VK.init(function() {}, function() {}, '5.28');
+	</script>
 </html>
