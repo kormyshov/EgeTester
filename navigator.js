@@ -31,7 +31,7 @@ function Navigate() {
 		}
 		s += "<a href='#' class='buttonnav' style='float:right;width:7em' onclick='pressboard_to_end()'>Завершить</a>";
 		if(!flag_goto_res) {
-			s += "<span style='float:right;margin-right:8px;margin-top:3px;'>";
+			s += "<span style='float:right;margin-right:8px;margin-top:3px'>";
 			var hours = this.time/3600|0;
 			var mins = (this.time/60|0)%60;
 			var secs = this.time%60;
@@ -41,7 +41,8 @@ function Navigate() {
 			if(secs<10) s += "0";
 			s += ""+secs;
 			s += "</span>";
-		}
+		}else
+			s += "<a href='#' class='buttonnav' style='float:right;width:12em;margin-right:8px' onclick='nav.set_report()'>Сообщить об ошибке</a>";
 
 		document.getElementById("div_nav").innerHTML = s;
 	}
@@ -58,5 +59,14 @@ function Navigate() {
 		if(this.cur + 1 < this.count) this.cur++;
 		questions[this.cur].print();
 		this.print();
+	}
+
+	this.set_report = function() {
+
+		VK.api('wall.post',{owner_id: -88218885, message: "Вопрос "+questions[this.cur].id+" содержит ошибку."}, function(data){
+			if(data.response){
+				//alert("Сообщение отправлено");
+			}//else alert("Ошибка "+data.error.error_code);
+		});
 	}
 }

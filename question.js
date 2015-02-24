@@ -1,4 +1,5 @@
 function Question() {
+	this.id;
 	//this.type;
 	this.title;
 	this.text;

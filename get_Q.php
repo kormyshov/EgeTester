@@ -21,6 +21,7 @@
 
 			echo "questions[".$i."] = new Question();\n";
 			//echo "questions[".$i."].type = \"".$row['Num'][0]."\";\n";
+			echo "questions[".$i."].id = \"".$row['id']."\";\n";
 			if($type == "theme")
 				echo "questions[".$i."].title = \"".($i+1)."\";\n";
 			else
