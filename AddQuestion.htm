@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Просмотр вопросов</title>
+		<script src="jquery-1.11.1.min.js" type="text/javascript"></script>
+		<script src="question.js"></script>
+		<script src="navigator.js"></script>
+		<script src="scripts.js"></script>
+		<link rel="stylesheet" href="main.css">
+	</head>
+
+	<script>
+		function press(){
+
+			var div = document.getElementById("div_question");
+			var s = "";
+
+			s += "<span class='q_title'>A13</span>";
+			s += "<span class='q_text'>"+document.getElementById("question").value+"</span>";
+
+			//s += "<span class='q_ans'><span onclick='put_ans(1);'><span class='q_ans1'>1</span><span class='q_ans2'>"+1+"</span></span></span>";
+			//s += "<span class='q_ans'><span onclick='put_ans(2);'><span class='q_ans1'>2</span><span class='q_ans2'>"+2+"</span></span></span>";
+			//s += "<span class='q_ans'><span onclick='put_ans(3);'><span class='q_ans1'>3</span><span class='q_ans2'>"+3+"</span></span></span>";
+			//s += "<span class='q_ans'><span onclick='put_ans(4);'><span class='q_ans1'>4</span><span class='q_ans2'>"+4+"</span></span></span>";
+
+			div.innerHTML = s;
+		}
+
+		var full_text = "";
+
+		function clears(){
+
+			full_text = document.getElementById("question").value;
+			var s = "";
+			for(var ch in full_text)
+				if(full_text[ch] != '\n') s += full_text[ch];
+
+			document.getElementById("question").value = s;
+		}
+
+		function recover(){
+
+			document.getElementById("question").value = full_text;
+		}
+	</script>
+
+	<body>
+		<div class="top" id="div_top">
+			<img src="bison_black.png">
+			<span>ЕГЭ по информатике и ИКТ</span>
+		</div>
+		<div class="main" id="div_main">
+			<div class="board" id="div_board" style="display:block">
+				<div class="div_in" id="div_in">
+					<div class="nav" id="div_nav"></div>
+					<div class="question" id="div_question"></div>
+				</div>
+			</div>
+		</div>
+		<div class="bottom" id="div_bottom">
+			<span>Тренажёр ЕГЭ (c) Copyright 2014 <a href="https://vk.com/profit_krsk">Тренинг-центр "Профит"</a></span>
+
+		</div>
+		<div>
+			<textarea id="question" cols="60" rows="7"></textarea>
+			<a href="#" onclick="press()">Отобразить</a><br>
+			<a href="#" onclick="clears()">Сжать</a><br>
+			<a href="#" onclick="recover()">Восстановить</a>
+		</div>
+	</body>
+</html>
+
